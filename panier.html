@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier d'achat</title>
+    <link rel="stylesheet" href="panier.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <div class="logo">TOP ATHLETE</div>
+                <div class="search-container">
+                    <input type="text" placeholder="Recherche" class="search-bar">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Compte</a></li>
+                        <li><a href="panier.html" class="cart">Panier <span id="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <h1>PANIER</h1>
+            <div class="cart-container">
+                <!-- Les articles du panier seront ajoutés ici via JavaScript -->
+                <div id="cart-items"></div>
+
+                <div class="cart-summary">
+                    <p id="item-count">0 article</p>
+                    <p>Livraison: gratuit</p>
+                    <p><strong id="total-price">Total TTC: 0,00 €</strong></p>
+                    <button class="checkout-button">COMMANDER</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your one-stop shop for official football jerseys. Quality guaranteed.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@footballjerseyshop.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="panier.js"></script>
+</body>
+</html>

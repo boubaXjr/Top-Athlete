@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Top Athlete</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <img src=" " alt="TOP ATHLETE" class="logo">
+            <input type="text" placeholder="Recherche" class="search">
+            <nav class="nav-icons">
+                <a href="#" class="les3">Contact</a>
+                <a href="#" class="les3">Compte</a>
+                <a href="#" class="les3">Panier <span class="cart-count">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="leagues">
+        <div class="league" id="premier-league">Premier League</div>
+        <div class="league" id="laliga">LaLiga</div>
+        <div class="league" id="ligue1">Ligue 1</div>
+        <div class="league" id="bundesliga">Bundesliga</div>
+        <div class="league" id="serie-a">Serie A</div>
+    </div>
+
+    <main>
+        <section class="contact-container">
+            <section class="contact-form">
+                <h2>Contactez-nous</h2>
+                <form action="#" method="post">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="surname">Prénom</label>
+                    <input type="text" id="surname" name="surname" required>
+
+                    <label for="subject">Sujet</label>
+                    <select id="subject" name="subject" required>
+                      <option value="">Sélectionnez un sujet</option>
+                      <option value="service-client">Service client</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                    <br>
+                    <br>
+
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="attachment">Document Joint</label>
+                    <input type="file" id="attachment" name="attachment">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">J'accepte les conditions générales et la politique de confidentialité</label>
+                    </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+            <section class="contact-info">
+                <h2>Nous contacter</h2>
+                <p>Email: support@topathlete.com</p>
+                <p>Téléphone: +123 456 7890</p>
+                <p>Adresse: 123 Rue du Sport, Paris, France</p>
+                <div class="social-icons">
+                    <a href="#" class="icon facebook">Facebook</a>
+                    <a href="#" class="icon twitter">Twitter</a>
+                    <a href="#" class="icon instagram">Instagram</a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Top Athlete. Tous droits réservés.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+
+
+</body>
+</html>
