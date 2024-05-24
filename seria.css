@@ -66,6 +66,7 @@ header {
     font-weight: bold;
     background-color: #dfe5e8;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 .league:hover {
