@@ -26,11 +26,18 @@ header {
     border-radius: 50%;
 }
 
-.search {
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.search-bar {
     width: 50%;
     padding: 10px;
-    border: none;
+    font-size: 16px;
     border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
 .les3 {
@@ -58,25 +65,49 @@ header {
 .leagues {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
-    background-color: #f9f9f9;
 }
 
 .league {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #0d4a80;
-    color: white;
-    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    padding:20px 10px;
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    color: #0d4a80;
+    font-weight: bold;
+    background-color: #dfe5e8;
+    text-decoration: none;
 }
 
-.league:hover {
-    background-color: #0044cc;
-    transform: scale(1.05);
+.league:hover{
+    background-color: white;
 }
 
+.teams {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.league:hover .teams {
+    display: block;
+}
+
+.teams p {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.teams p:last-child {
+    border-bottom: none;
+}
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -191,6 +222,57 @@ header {
 footer {
     background-color: #0d4a80;
     color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0;
+    border-top: 1px solid #1192e8;
+}
+
+.footer-bottom p {
+    margin: ;
+}
+
+.mail{
+    border: none;
+    border-radius: 20px;
+    padding: 8px; 
+}
+
+.submit {
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
 }
