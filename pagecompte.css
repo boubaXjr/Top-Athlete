@@ -66,6 +66,24 @@ header {
     right: -10px;
 }
 
+/* Ajout des styles de survol pour la barre de navigation */
+.nav-icons a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Changement de couleur au survol */
+.nav-icons a:hover {
+    color: #4a90e2; /* Bleu clair */
+}
+
+/* Ajout de transition pour la couleur du texte */
+.nav-icons a {
+    transition: color 0.3s;
+}
+
 
 /* Container styles */
 .container {

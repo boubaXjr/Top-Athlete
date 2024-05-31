@@ -58,6 +58,24 @@ header {
     right: -10px;
 }
 
+/* Ajout des styles de survol pour la barre de navigation */
+.nav-icons a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Changement de couleur au survol */
+.nav-icons a:hover {
+    color: #4a90e2; /* Bleu clair */
+}
+
+/* Ajout de transition pour la couleur du texte */
+.nav-icons a {
+    transition: color 0.3s;
+}
+
 
 
 .leagues {
@@ -101,12 +119,42 @@ header {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Ajout de la transition pour la couleur de fond et la couleur du texte */
 }
 
-.teams p:last-child {
-    border-bottom: none;
+.teams p:hover {
+    background-color: #0d4a80; /* Changement de couleur de fond au survol */
+    color: white; /* Changement de couleur du texte au survol */
 }
 
+.league-link {
+    display: inline-block;
+    position: relative;
+    color: #0d4a80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.league-link:hover {
+    color: #1192e8; /* Changement de couleur au survol */
+}
+
+.league-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1192e8; /* Ligne bleue sous le lien */
+    transform: scaleX(0); /* Ligne initialement invisible */
+    transition: transform 0.3s ease;
+}
+
+.league-link:hover::before {
+    transform: scaleX(1); /* Affiche la ligne bleue au survol */
+}
 .image-slider {
     width: 100%;
     height: 300px; /* Ajustez la hauteur selon vos besoins */
@@ -142,7 +190,51 @@ header {
     }
 }
 
+/* Styles spécifiques à la section "À propos de nous" */
+.about-us {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
 
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    flex: 0 0 60%;
+    padding: 0 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 0 0 35%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .about-image {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+}
 footer {
     background-color: #0d4a80;
     color: #fff;
@@ -155,7 +247,7 @@ footer {
     flex-wrap: wrap;
     max-width: 100%;
     margin: auto;
-    padding: 0 20px;
+    padding: 20px 20px 0; /* Légèrement ajusté le padding */
 }
 
 .footer-section {
@@ -168,11 +260,14 @@ footer {
     margin-bottom: 10px;
 }
 
+.footer-section p {
+    margin-bottom: 5px;
+}
+
 .footer-section a {
     color: #fff;
     text-decoration: none;
     display: block;
-    margin-bottom: 5px;
 }
 
 .footer-section a:hover {
@@ -186,19 +281,6 @@ footer {
 }
 
 .footer-bottom p {
-    margin: ;
+    margin: 0;
 }
-
-.mail{
-    border: none;
-    border-radius: 20px;
-    padding: 8px; 
-}
-
-.submit {
-    border: none;
-    border-radius: 20px;
-    padding: 8px;
-}
-
 

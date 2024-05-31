@@ -13,7 +13,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 50px;
+    padding: 20px 50px;
 }
 
 .logo {
@@ -24,13 +24,9 @@ header {
 
 .search {
     width: 50%;
-    padding: 10px 10px;
+    padding: 10px;
     border: none;
     border-radius: 20px;
-}
-
-.les3 {
-    margin-right: 30px;
 }
 
 .nav-icons a {
@@ -49,6 +45,24 @@ header {
     position: absolute;
     top: -10px;
     right: -10px;
+}
+
+/* Ajout des styles de survol pour la barre de navigation */
+.nav-icons a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Changement de couleur au survol */
+.nav-icons a:hover {
+    color: #4a90e2; /* Bleu clair */
+}
+
+/* Ajout de transition pour la couleur du texte */
+.nav-icons a {
+    transition: color 0.3s;
 }
 
 .leagues {
@@ -92,10 +106,42 @@ header {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Ajout de la transition pour la couleur de fond et la couleur du texte */
 }
 
-.teams p:last-child {
-    border-bottom: none;
+.teams p:hover {
+    background-color: #0d4a80; /* Changement de couleur de fond au survol */
+    color: white; /* Changement de couleur du texte au survol */
+}
+
+
+.league-link {
+    display: inline-block;
+    position: relative;
+    color: #0d4a80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.league-link:hover {
+    color: #1192e8; /* Changement de couleur au survol */
+}
+
+.league-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1192e8; /* Ligne bleue sous le lien */
+    transform: scaleX(0); /* Ligne initialement invisible */
+    transition: transform 0.3s ease;
+}
+
+.league-link:hover::before {
+    transform: scaleX(1); /* Affiche la ligne bleue au survol */
 }
 
 .products-container {
@@ -114,6 +160,7 @@ header {
     margin: 10px;
     background-color: transparent;
     color: #0d4a80;
+    text-align: center;
 }
 
 .product:hover {
@@ -178,16 +225,4 @@ footer {
 
 .footer-bottom p {
     margin: 0;
-}
-
-.mail {
-    border: none;
-    border-radius: 20px;
-    padding: 8px;
-}
-
-.submit {
-    border: none;
-    border-radius: 20px;
-    padding: 8px;
 }

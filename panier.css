@@ -60,6 +60,7 @@ nav ul li a {
     border-radius: 20px;
     border: 1px solid #ccc;
 }
+
 .leagues {
     display: flex;
     justify-content: center;
@@ -68,16 +69,17 @@ nav ul li a {
 .league {
     position: relative;
     width: 100%;
-    padding:20px 10px;
+    padding: 20px 10px;
     text-align: center;
     cursor: pointer;
     color: #0d4a80;
     font-weight: bold;
     background-color: #dfe5e8;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.league:hover{
+.league:hover {
     background-color: white;
 }
 
@@ -101,10 +103,41 @@ nav ul li a {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.teams p:last-child {
-    border-bottom: none;
+.teams p:hover {
+    background-color: #0d4a80;
+    color: white;
+}
+
+.league-link {
+    display: inline-block;
+    position: relative;
+    color: #0d4a80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.league-link:hover {
+    color: #1192e8;
+}
+
+.league-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1192e8;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.league-link:hover::before {
+    transform: scaleX(1);
 }
 
 main {
@@ -143,6 +176,7 @@ main {
     border: 1px solid #ccc;
     padding: 20px;
     width: 300px;
+    background-color: #e1e8ed; /* Ajout de la couleur de fond pour la section de résumé du panier */
 }
 
 .checkout-button {
@@ -151,6 +185,11 @@ main {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Ajout de la transition de couleur de fond */
+}
+
+.checkout-button:hover {
+    background-color: #0056b3; /* Changement de couleur de fond au survol */
 }
 
 footer {
@@ -196,13 +235,13 @@ footer {
 }
 
 .footer-bottom p {
-    margin: ;
+    margin: 0;
 }
 
-.mail{
+.mail {
     border: none;
     border-radius: 20px;
-    padding: 8px; 
+    padding: 8px;
 }
 
 .submit {
