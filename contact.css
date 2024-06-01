@@ -10,28 +10,34 @@ body {
 header {
     background-color: #0d4a80;
     color: white;
-    width: 100%;
-    height: 80px;
+    padding: 10px 0;
 }
 
 .top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 0 20px;
 }
 
 .logo {
-    width: 40px;
+    width: 80px;
     margin-left: 10px;
     border-radius: 50%;
 }
 
-.search {
-    width: 20%;
-    padding: 6px 10px;
-    border: none;
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
     border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
 .les3 {
@@ -56,7 +62,6 @@ header {
     right: -10px;
 }
 
-<<<<<<< HEAD
 /* Ajout des styles de survol pour la barre de navigation */
 .nav-icons a {
     margin-left: 20px;
@@ -74,9 +79,6 @@ header {
 .nav-icons a {
     transition: color 0.3s;
 }
-=======
-
->>>>>>> boubba
 
 .leagues {
     display: flex;
@@ -96,7 +98,7 @@ header {
 }
 
 .league:hover{
-	background-color: white;
+    background-color: white;
 }
 
 .teams {
@@ -155,7 +157,6 @@ header {
 .league-link:hover::before {
     transform: scaleX(1); /* Affiche la ligne bleue au survol */
 }
-
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -270,6 +271,57 @@ header {
 footer {
     background-color: #0d4a80;
     color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0;
+    border-top: 1px solid #1192e8;
+}
+
+.footer-bottom p {
+    margin: ;
+}
+
+.mail{
+    border: none;
+    border-radius: 20px;
+    padding: 8px; 
+}
+
+.submit {
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
 }
