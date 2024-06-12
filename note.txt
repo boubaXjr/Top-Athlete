@@ -1,0 +1,13 @@
+-->on doit enlever adresse de livraison ? parceque je trouve que ca sert a rien vue que dans notre site en aucun cas onlui demande son adresse veu que il chosit un produit il va dans le panier dachat et il le valide ( la commande °) est ce que on doit crrer une autre page suivie de la comande oubien? 
+
+-->doit ajouter dans notre base de donne lentite contact vue que le client peut nous passer contact
+
+-->enfaite la lentite commande elle sert a quoi excatement? 
+
+-->nb ne pas oublier de demander a chat de nous crrer une interface adminsitrateur et aussi comprendre a quoi cela va nous servir . 
+
+--> notre logo jusqua present on en a pas.
+
+--> on doit ajouter la taille dans nos maillot. 
+
+--> demander a chat aussi pourquoi ma table produit est pas dans le php my admin

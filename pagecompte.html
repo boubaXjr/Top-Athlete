@@ -9,14 +9,18 @@
 <body>
 
   <header>
-        <div class="top-bar">
-           <a href="C:\Users\bahbo\Top-Athlete\index.html"><img src= "C:\Users\bahbo\OneDrive\Desktop\image pour site web\logo site web.jpg" alt="TOP ATHLETE" class="logo"></a>
-            <input type="text" placeholder="Recherche" class="search">
-            <nav class="nav-icons">
-                <a href="contact.html"  class="les3">Contact</a>
-                <a href="pagecompte.html" class="les3">Compte</a>
-                <a href="panier.html" class="les3">Panier <span class="cart-count">0</span></a>
-            </nav>
+        <div class="header-container">
+           <a href="index.html"><img src= "image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
+                <div class="search-container">
+                    <input type="text" placeholder="Recherche" class="search-bar">
+                </div>
+            <nav>
+                    <ul>
+                        <li><a href="contact.html" class="les3">Contact</a></li>
+                        <li><a href="pagecompte.html" class="les3">Compte</a></li>
+                        <li><a href="panier.html" class="cart les3">Panier <span id="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
         </div>
     </header>
 
@@ -32,7 +36,8 @@
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Créez un Compte!</h1>
-                <input type="text" placeholder="Name" required />
+                <input type="text" placeholder="Nom" required />
+                <input type="text" placeholder="Prénom" required />
                 <input type="email" placeholder="Email" required />
                 <input type="password" placeholder="Mot de passe" required />
                 <input type="password" placeholder="Répétez le mot de passe" required />

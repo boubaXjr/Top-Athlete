@@ -22,13 +22,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #003366;
+    background-color: #004AAD;
     padding: 10px 20px;
 }
 
-.logo {
+
+header {
+    background-color: #004AAD;
     color: white;
-    font-size: 24px;
+    width: 100%;
+}
+
+
+.logo {
+    width: 40px;
+    margin-left: 10px;
+    width: 200px;
+    margin-left: 10%;
 }
 
 nav ul {
@@ -193,8 +203,9 @@ main {
 }
 
 footer {
-    background-color: #0d4a80;
-    color: #fff;
+  background-color: #004AAD;   
+  color: #fff;
+
     padding: 20px 0;
 }
 

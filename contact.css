@@ -7,23 +7,44 @@ body {
     background-color: #eef2f3;
 }
 
-header {
-    background-color: #0d4a80;
-    color: white;
-    padding: 10px 0;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004AAD;
+    padding: 10px 20px;
 }
 
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+
+header {
+    background-color: #004AAD;
+    color: white;
+    width: 100%;
 }
+
 
 .logo {
-    width: 80px;
+    width: 40px;
     margin-left: 10px;
-    border-radius: 50%;
+    width: 200px;
+    margin-left: 10%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .search-container {
@@ -40,45 +61,7 @@ header {
     border: 1px solid #ccc;
 }
 
-.les3 {
-    margin-right: 30px;
-}
 
-.nav-icons a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-}
-
-.nav-icons .cart-count {
-    background: #fff;
-    color: #0d4a80;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-}
-
-/* Ajout des styles de survol pour la barre de navigation */
-.nav-icons a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-}
-
-/* Changement de couleur au survol */
-.nav-icons a:hover {
-    color: #4a90e2; /* Bleu clair */
-}
-
-/* Ajout de transition pour la couleur du texte */
-.nav-icons a {
-    transition: color 0.3s;
-}
 
 .leagues {
     display: flex;
@@ -269,7 +252,7 @@ header {
 }
 
 footer {
-    background-color: #0d4a80;
+    background-color: #004AAD;
     color: #fff;
     padding: 20px 0;
 }

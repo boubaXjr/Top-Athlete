@@ -10,26 +10,28 @@ body {
 }
 
 header {
-    background-color: #0d4a80;
+       background-color: #004AAD;
     color: white;
     width: 100%;
     position: absolute;
     top: 0;
 }
 
-.top-bar {
+.header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 30px 50px;
+    align-items: center;
+    background-color: #004AAD;
+    padding: 10px 20px;
 }
+
 
 .logo {
-    width: 80px;
+     width: 40px;
     margin-left: 10px;
-    border-radius: 50%;
+    width: 200px;
+    margin-left: 10%;
 }
-
 .search-container {
     display: flex;
     justify-content: center;
@@ -44,26 +46,21 @@ header {
     border: 1px solid #ccc;
 }
 
-.les3 {
-    margin-right: 30px;
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
 }
 
-.nav-icons a {
+nav ul li {
     margin-left: 20px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    position: relative;
-}
-
-.nav-icons .cart-count {
-    background: #fff;
-    color: #0d4a80;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
+    font-size: 18px;
 }
 
 /* Ajout des styles de survol pour la barre de navigation */
@@ -254,7 +251,7 @@ button:focus {
 
 
 footer {
-    background-color: #0d4a80;
+      background-color: #004AAD;
     color: #fff;
     padding: 20px 0;
 }
