@@ -191,16 +191,19 @@ main {
 
 .checkout-button {
     background-color: #007bff;
-    color: white;
+    color: black;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Ajout de la transition de couleur de fond */
 }
-
+.checkout-button a {
+    text-decoration: none;
+}
 .checkout-button:hover {
     background-color: #0056b3; /* Changement de couleur de fond au survol */
 }
+
 
 footer {
   background-color: #004AAD;   

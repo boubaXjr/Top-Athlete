@@ -8,21 +8,23 @@
     <link rel="stylesheet" type="text/css" href="monsiteweb.css">
 </head>
 <body>
-  <header>
-            <div class="header-container">
-                 <a href="index.html"><img src= "image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
-                <div class="search-container">
-                    <input type="text" placeholder="Recherche" class="search-bar">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="contact.html" class="les3">Contact</a></li>
-                        <li><a href="pagecompte.html" class="les3">Compte</a></li>
-                        <li><a href="panier.html" class="cart les3">Panier <span id="cart-count">0</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+ <header>
+    <div class="header-container">
+        <a href="index.html"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
+        <div class="search-container">
+            <input type="text" placeholder="Recherche" class="search-bar">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="contact.html" class="les3">Contact</a></li>
+                <li><a href="pagecompte.html" class="les3">Compte</a></li>
+                <li><a href="panier.html" class="cart les3">Panier <span id="cart-count">0</span></a></li>
+                <li><a href="favoris.html" class="les3">Favoris</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
    <div class="leagues">
     <div class="league" id="premier-league">
@@ -94,20 +96,16 @@
             <h1> CE QUE NOUS FAISONS</h1>
             <div class="features">
                 <div class="feature">
-                    <img src="image/44.jpg" alt="Livraison en 24H">
-                    <p>je sais pas quoi mentir ici</p>
+                    <img src="image/51.PNG" alt="Livraison en 24H">
+                    <p>LIVRAISON GRATUITE</p>
                 </div>
                 <div class="feature">
-                    <img src="image/44.jpg" alt="Retour sous 30 jours">
-                    <p>je sais pas quoi mentir ici</p>
+                    <img src="image/52.PNG" alt="Satisfaction client">
+                    <p>NOS SOMME LA POUR VOUS SATISFAIRE</p>
                 </div>
                 <div class="feature">
-                    <img src="image/44.jpg" alt="Satisfaction client">
-                    <p>je sais pas quoi mentir ici</p>
-                </div>
-                <div class="feature">
-                    <img src="image/44.jpg" alt="Contact">
-                    <p>je sais pas quoi mentir ici</p>
+                    <img src="image/53.PNG" alt="Contact">
+                    <p><a href="contact.html" class="les3">CONTACTER NOUS </a></p>
                 </div>
             </div>
         </div>
@@ -245,43 +243,51 @@
     </main>
 
 <main>
-    <section class="about-us">
-        <h2>LE SPÉCIALISTE FRANÇAIS DE LA VENTE DE MAILLOT DE FOOTBALL EN LIGNE.</h2>
+    <section id="about-us"class="about-us">
         <div class="about-content">
+            <div class="about-image">
+                <img src="image/45.JPG" alt="Image 1">
+            </div>
             <div class="about-text">
-                <h3>NOTRE BOUTIQUE</h3>
+                <h3>HISTORIQUE</h3>
                 <p>
                     <strong>Top Athlete</strong>, fondé en 2015, est le leader français de la vente en ligne de maillots de football. Avec plus de 15 000 références en stock, nous vous garantissons de trouver le maillot de votre équipe favorite, ainsi que des équipements comme chaussures, protège-tibias et survêtements, le tout aux meilleurs prix. Nous recevons quotidiennement des nouveaux produits, alors n'hésitez pas à revenir régulièrement pour découvrir les dernières nouveautés !
                 </p>
-                <p>
-                    Nous offrons une large gamme de maillots officiels des plus grands clubs français comme le Paris Saint-Germain, l'Olympique de Marseille, l'Olympique Lyonnais, ainsi que des clubs internationaux tels que le FC Barcelone, le Real Madrid, Chelsea et Manchester United. Chaque maillot est sous licence officielle, assurant une qualité irréprochable.
-                </p>
-            </div>
-            <div class="about-image">
-                <img src="image/45.JPG" alt="Image 1">
-                <img src="image/46.JPG" alt="Image 2">
             </div>
         </div>
         
         <div class="about-content">
+            <div class="about-image">
+                <img src="image/46.JPG" alt="Image 2">
+            </div>
+            <div class="about-text">
+                <h3>NOTRE BOUTIQUE</h3>
+                <p>
+                    Nous offrons une large gamme de maillots officiels des plus grands clubs français comme le Paris Saint-Germain, l'Olympique de Marseille, l'Olympique Lyonnais, ainsi que des clubs internationaux tels que le FC Barcelone, le Real Madrid, Chelsea et Manchester United. Chaque maillot est sous licence officielle, assurant une qualité irréprochable.
+                </p>
+            </div>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-image">
+                <img src="image/49.JPG" alt="Image 4">
+            </div>
             <div class="about-text">
                 <h3>Livraison gratuite en 24h</h3>
                 <p>
                     Pour toute commande de plus de 100€. Passez votre commande avant 15h et recevez-la le lendemain. Nous proposons également des options de livraison rapide avec Colissimo et Chronopost. Pour les commandes inférieures à 100€, les frais de port sont de seulement 5€.
                 </p>
             </div>
-            <div class="about-image">
-                <img src="image/49.JPG" alt="Image 4">
-            </div>
         </div>
     </section>
 </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-section">
-                <h4>A propos de nous </h4>
-                <p>Votre boutique unique pour les maillots de football officiels. Qualité garantie..</p>
-            </div>
+               <h4><a href="#about-us">A propos de nous</a></h4>
+    <p>Votre boutique unique pour les maillots de football officiels. Qualité garantie..</p>
+             </div>
             <div class="footer-section">
                 <h4>Contactez nous </h4>
                 <p>Email: support@footballmezaour.com</p>
@@ -320,11 +326,23 @@ function moveSlide(n) {
 
 showSlides();
 
-
-
-
-
-
     </script>
+
+<!-- JavaScript pour les favoris  -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const favorisButtons = document.querySelectorAll('.favoris');
+
+        favorisButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                this.querySelector('i').style.color = this.classList.contains('active') ? '#e84545' : '#000000';
+            });
+        });
+    });
+
+
+</script>
 </body>
 </html>

@@ -215,6 +215,11 @@ nav ul li a {
     font-size: 14px;
     color: #333;
 }
+.feature p a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Garde la couleur par défaut du lien */
+}
+
 /* Style pour la section Top Ventes */
 
 .products-container {
@@ -254,6 +259,20 @@ nav ul li a {
     margin: 5px 0;
 }
 
+.favoris i {
+    color: #000000; /* Couleur par défaut: noir */
+    font-size: 16px; /* Taille ajustée, réduisez cette valeur selon votre besoin */
+    transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.favoris.active i {
+    color: #e84545; /* Rouge vif lorsque sélectionné */
+}
+
+.favoris:hover i {
+    color: #e84545; /* Rouge vif au survol pour indiquer l'interactivité */
+}
+
 /* Styles spécifiques à la section "À propos de nous" */
 .about-us {
     padding: 40px;
@@ -265,6 +284,10 @@ nav ul li a {
     justify-content: space-around;
     margin-top: 40px;
     align-items: center;
+}
+
+.about-content:nth-child(even) {
+    flex-direction: row-reverse; /* Inverse la direction des éléments pour les sections paires */
 }
 
 .about-text {
@@ -286,9 +309,7 @@ nav ul li a {
 
 .about-image {
     flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 20px; /* Ajoute une marge autour de l'image */
 }
 
 .about-image img {

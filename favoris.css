@@ -1,6 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Utilisation de vh pour spécifier la hauteur de la fenêtre */
+    position: relative; /* Assure que le footer reste en bas de la page */
 }
 
 .header-container {
@@ -136,61 +140,13 @@ nav ul li a {
     transform: scaleX(1); /* Affiche la ligne bleue au survol */
 }
 
-.products-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    flex-wrap: wrap;
-    background-color: #f8f9fa;
-}
 
-.product {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 300px;
-    margin: 10px;
-    background-color: transparent;
-    color: #0d4a80;
-    text-align: center;
-}
-
-.product:hover {
-    transform: scale(1.05);
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-}
-
-.product-info {
-    padding: 10px;
-    text-align: center;
-}
-
-.product-info p {
-    margin: 5px 0;
-}
-
-
-favoris i {
-    color: #000000; /* Couleur par défaut: noir */
-    font-size: 16px; /* Taille ajustée, réduisez cette valeur selon votre besoin */
-    transition: color 0.3s; /* Transition douce pour le changement de couleur */
-}
-
-.favoris.active i {
-    color: #e84545; /* Rouge vif lorsque sélectionné */
-}
-
-.favoris:hover i {
-    color: #e84545; /* Rouge vif au survol pour indiquer l'interactivité */
-}
 footer {
     background-color: #004AAD;
     color: #fff;
     padding: 20px 0;
+    margin-top: auto; /* Place le footer tout en bas de la page */
+    width: 100%;
 }
 
 .footer-container {
@@ -198,7 +154,6 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: 100%;
-    margin: auto;
     padding: 0 20px;
 }
 
@@ -231,4 +186,16 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+.mail {
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.submit {
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
 }
