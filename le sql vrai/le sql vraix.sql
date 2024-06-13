@@ -59,8 +59,9 @@ CREATE TABLE administrateur (
 -- Insertion d'exemples de données dans la table Administrateur
 INSERT INTO administrateur (nom_utilisateur, mot_de_passe, email, nom, prenom) VALUES
 ('root', 'mamadou', 'papaousmaneogo@gmail.com', 'Seck', 'Ousmane'),
-('admin2', 'adminpass456', 'admin2@example.com', 'Admin', 'Two'),
-('root', 'lecon', 'thetedd@gmail.com', 'Diatha', 'teddy');
+('root', 'Dusty126$', 'bahbouba5000@gmail.com', 'Bah', 'Boubacar'),
+('root', 'toor', 'theteddd@icloud.com', 'Diatha', 'teddy');
+
 
 -- Table Categorie
 CREATE TABLE categorie (
