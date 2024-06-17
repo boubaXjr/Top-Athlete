@@ -10,71 +10,71 @@
 <body>
  <header>
     <div class="header-container">
-        <a href="index.html"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
+        <a href="index.php"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
         <div class="search-container">
             <input type="text" placeholder="Recherche" class="search-bar">
         </div>
         <nav>
             <ul>
-                <li><a href="contact.html" class="les3">Contact</a></li>
-                <li><a href="pagecompte.html" class="les3">Compte</a></li>
-                <li><a href="panier.html" class="cart les3">Panier <span id="cart-count">0</span></a></li>
-                <li><a href="favoris.html" class="les3">Favoris</a></li>
+                <li><a href="contact.php" class="les3">Contact</a></li>
+                <li><a href="pagecompte.php" class="les3">Compte</a></li>
+                <li><a href="panier.php" class="cart les3">Panier <span id="cart-count">0</span></a></li>
+                <li><a href="favoris.php" class="les3">Favoris</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 
-   <div class="leagues">
-    <div class="league" id="premier-league">
-        <a href="premierleague.html" class="league-link">Premier League</a>
-        <div class="teams">
-            <p class="team">Manchester City</p>
-            <p class="team">Manchester United</p>
-            <p class="team">Liverpool</p>
-            <p class="team">Arsenal</p>
-            <p class="team">Chelsea</p>
-            <p class="team">Tottenham</p>
+    <div class="leagues">
+        <div class="league" id="premier-league">
+            <a href="premierleague.php" class="league-link">Premier League</a>
+            <div class="teams">
+                <p>Manchester City</p>
+                <p>Manchester United</p>
+                <p>Liverpool</p>
+                <p>Arsenal</p>
+                <p>Chelsea</p>
+                <p>Tottenham</p>
+            </div>
+        </div>
+        <div class="league" id="laliga">
+            <a href="laliga.php" class="league-link">LaLiga</a>
+            <div class="teams">
+                <p>Barcelone</p>
+                <p>Real Madrid</p>
+                <p>Atletico Madrid</p>
+            </div>
+        </div>
+        <div class="league" id="ligue1">
+            <a href="ligue1.php" class="league-link">Ligue 1</a>
+            <div class="teams">
+                <p>Paris Saint-Germain</p>
+                <p>Marseille</p>
+                <p>Monaco</p>
+                <p>Lyon</p>
+                <p>Lille</p>
+            </div>
+        </div>
+        <div class="league" id="bundesliga">
+            <a href="bundesliga.php" class="league-link">Bundesliga</a>
+            <div class="teams">
+                <p>Bayern Munich</p>
+                <p>Dortmund</p>
+                <p>Bayer Leverkusen</p>
+                <p>Leipzig</p>
+            </div>
+        </div>
+        <div class="league" id="serie-a">
+            <a href="seria.php" class="league-link">Serie A</a>
+            <div class="teams">
+                <p>Juventus</p>
+                <p>Inter Milan</p>
+                <p>AC Milan</p>
+                <p>Napoli</p>
+            </div>
         </div>
     </div>
-    <div class="league" id="laliga">
-        <a href="laliga.html" class="league-link">LaLiga</a>
-        <div class="teams">
-            <p class="team">Barcelona</p>
-            <p class="team">Real Madrid</p>
-            <p class="team">Atletico Madrid</p>
-        </div>
-    </div>
-    <div class="league" id="ligue1">
-        <a href="ligue1.html" class="league-link">Ligue 1</a>
-        <div class="teams">
-            <p class="team">Paris Saint-Germain</p>
-            <p class="team">Marseille</p>
-            <p class="team">Monaco</p>
-            <p class="team">Lyon</p>
-            <p class="team">Lille</p>
-        </div>
-    </div>
-    <div class="league" id="bundesliga">
-        <a href="bundesliga.html" class="league-link">Bundesliga</a>
-        <div class="teams">
-            <p class="team">Bayern Munich</p>
-            <p class="team">Dortmund</p>
-            <p class="team">Bayer Leverkusen</p>
-            <p class="team">Leipzig</p>
-        </div>
-    </div>
-    <div class="league" id="serie-a">
-        <a href="seria.html" class="league-link">Serie A</a>
-        <div class="teams">
-            <p class="team">Juventus</p>
-            <p class="team">Inter Milan</p>
-            <p class="team">AC Milan</p>
-            <p class="team">Napoli</p>
-        </div>
-    </div>
-</div>
 
 <!-- Carrousel d'images -->
     <div class="carousel">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="feature">
                     <img src="image/53.PNG" alt="Contact">
-                    <p><a href="contact.html" class="les3">CONTACTER NOUS </a></p>
+                    <p><a href="contact.php" class="les3">CONTACTER NOUS </a></p>
                 </div>
             </div>
         </div>
@@ -243,6 +243,7 @@
     </main>
 
 <main>
+                <h1>TOP ATHLETE </h1>
     <section id="about-us"class="about-us">
         <div class="about-content">
             <div class="about-image">
