@@ -10,16 +10,16 @@
 <body>
     <header>
     <div class="header-container">
-        <a href="index.html"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
+        <a href="index.php"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
         <div class="search-container">
             <input type="text" placeholder="Recherche" class="search-bar">
         </div>
         <nav>
             <ul>
-                <li><a href="contact.html" class="les3">Contact</a></li>
-                <li><a href="pagecompte.html" class="les3">Compte</a></li>
-                <li><a href="panier.html" class="cart les3">Panier <span id="cart-count">0</span></a></li>
-                <li><a href="favoris.html" class="les3">Favoris</a></li>
+                <li><a href="contact.php" class="les3">Contact</a></li>
+                <li><a href="pagecompte.php" class="les3">Compte</a></li>
+                <li><a href="panier.php" class="cart les3">Panier <span id="cart-count">0</span></a></li>
+                <li><a href="favoris.php" class="les3">Favoris</a></li>
             </ul>
         </nav>
     </div>

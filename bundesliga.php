@@ -10,25 +10,28 @@
 <body>
   <header>
     <div class="header-container">
-        <a href="index.html"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
+        <a href="index.php"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
         <div class="search-container">
-            <input type="text" placeholder="Recherche" class="search-bar">
-        </div>
+<form action="recherche.php" method="get" class="search-form">
+                <input type="text" name="query" class="search-bar" placeholder="Rechercher un produit..." required>
+                <button type="submit" class="search-button">Rechercher</button>
+            </form>        </div>
         <nav>
             <ul>
-                <li><a href="contact.html" class="les3">Contact</a></li>
-                <li><a href="pagecompte.html" class="les3">Compte</a></li>
-                <li><a href="panier.html" class="cart les3">Panier <span id="cart-count">0</span></a></li>
-                <li><a href="favoris.html" class="les3">Favoris</a></li>
+                <li><a href="contact.php" class="les3">Contact</a></li>
+                <li><a href="pagecompte.php" class="les3">Compte</a></li>
+                <li><a href="panier.php" class="cart les3">Panier <span id="cart-count">0</span></a></li>
+                <li><a href="favoris.php" class="les3">Favoris</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 
+
     <div class="leagues">
         <div class="league" id="premier-league">
-            <a href="premierleague.html" class="league-link">Premier League</a>
+            <a href="premierleague.php" class="league-link">Premier League</a>
             <div class="teams">
                 <p>Manchester City</p>
                 <p>Manchester United</p>
@@ -39,7 +42,7 @@
             </div>
         </div>
         <div class="league" id="laliga">
-            <a href="laliga.html" class="league-link">LaLiga</a>
+            <a href="laliga.php" class="league-link">LaLiga</a>
             <div class="teams">
                 <p>Barcelone</p>
                 <p>Real Madrid</p>
@@ -47,7 +50,7 @@
             </div>
         </div>
         <div class="league" id="ligue1">
-            <a href="ligue1.html" class="league-link">Ligue 1</a>
+            <a href="ligue1.php" class="league-link">Ligue 1</a>
             <div class="teams">
                 <p>Paris Saint-Germain</p>
                 <p>Marseille</p>
@@ -57,7 +60,7 @@
             </div>
         </div>
         <div class="league" id="bundesliga">
-            <a href="bundesliga.html" class="league-link">Bundesliga</a>
+            <a href="bundesliga.php" class="league-link">Bundesliga</a>
             <div class="teams">
                 <p>Bayern Munich</p>
                 <p>Dortmund</p>
@@ -66,7 +69,7 @@
             </div>
         </div>
         <div class="league" id="serie-a">
-            <a href="seria.html" class="league-link">Serie A</a>
+            <a href="seria.php" class="league-link">Serie A</a>
             <div class="teams">
                 <p>Juventus</p>
                 <p>Inter Milan</p>
