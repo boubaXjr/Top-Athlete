@@ -7,23 +7,44 @@ body {
     background-color: #eef2f3;
 }
 
-header {
-    background-color: #0d4a80;
-    color: white;
-    padding: 10px 0;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004AAD;
+    padding: 10px 20px;
 }
 
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+
+header {
+    background-color: #004AAD;
+    color: white;
+    width: 100%;
 }
+
 
 .logo {
-    width: 80px;
+    width: 40px;
     margin-left: 10px;
-    border-radius: 50%;
+    width: 200px;
+    margin-left: 10%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .search-container {
@@ -40,27 +61,7 @@ header {
     border: 1px solid #ccc;
 }
 
-.les3 {
-    margin-right: 30px;
-}
 
-.nav-icons a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-}
-
-.nav-icons .cart-count {
-    background: #fff;
-    color: #0d4a80;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-}
 
 .leagues {
     display: flex;
@@ -103,10 +104,41 @@ header {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Ajout de la transition pour la couleur de fond et la couleur du texte */
 }
 
-.teams p:last-child {
-    border-bottom: none;
+.teams p:hover {
+    background-color: #0d4a80; /* Changement de couleur de fond au survol */
+    color: white; /* Changement de couleur du texte au survol */
+}
+
+.league-link {
+    display: inline-block;
+    position: relative;
+    color: #0d4a80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.league-link:hover {
+    color: #1192e8; /* Changement de couleur au survol */
+}
+
+.league-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1192e8; /* Ligne bleue sous le lien */
+    transform: scaleX(0); /* Ligne initialement invisible */
+    transition: transform 0.3s ease;
+}
+
+.league-link:hover::before {
+    transform: scaleX(1); /* Affiche la ligne bleue au survol */
 }
 .contact-container {
     display: flex;
@@ -227,7 +259,7 @@ header {
 }
 
 footer {
-    background-color: #0d4a80;
+    background-color: #004AAD;
     color: #fff;
     padding: 20px 0;
 }
