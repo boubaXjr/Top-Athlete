@@ -81,8 +81,8 @@
            <?php
 // Connexion à la base de données
 $servername = "localhost";
-$username = "votre_nom_utilisateur";
-$password = "votre_mot_de_passe";
+$username = "root";
+$password = "Dusty126$";
 $dbname = "maillot_nouvelle";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -260,7 +260,7 @@ nav ul li a {
 }
 
 .favoris i {
-    color: #000000; /* Couleur par défaut: noir */
+    color: white; /* Couleur par défaut: noir */
     font-size: 16px; /* Taille ajustée, réduisez cette valeur selon votre besoin */
     transition: color 0.3s; /* Transition douce pour le changement de couleur */
 }

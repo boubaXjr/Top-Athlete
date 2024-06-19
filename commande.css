@@ -180,3 +180,92 @@ footer {
 .footer-bottom p {
     margin: 0;
 }
+
+
+
+
+/* Order Container Styling */
+.order-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-header {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.order-row {
+    text-align: left;
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+}
+
+.order-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.order-price, .order-quantity, .order-subtotal {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-empty {
+    text-align: center;
+    font-style: italic;
+}
+
+.order-total-label, .order-total-value {
+    padding: 10px;
+    font-weight: bold;
+    border-top: 2px solid #333;
+}
+
+.order-pay-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-pay-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+

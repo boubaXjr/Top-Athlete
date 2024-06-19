@@ -1,32 +1,34 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Commandes</title>
-             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Commande</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="commande.css">
 </head>
 <body>
-    <header>
+<header>
     <div class="header-container">
         <a href="index.php"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
         <div class="search-container">
             <input type="text" placeholder="Recherche" class="search-bar">
         </div>
         <nav>
-            <ul>
-                <li><a href="contact.php" class="les3">Contact</a></li>
-                <li><a href="pagecompte.php" class="les3">Compte</a></li>
-                <li><a href="panier.php" class="cart les3">Panier <span id="cart-count">0</span></a></li>
-                <li><a href="favoris.php" class="les3">Favoris</a></li>
+            <ul class="nav-links">
+                <li><a href="contact.php" class="nav-link">Contact</a></li>
+                <li><a href="pagecompte.php" class="nav-link">Compte</a></li>
+                <li><a href="panier.php" class="nav-link">Panier <span id="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?></span></a></li>
+                <li><a href="favoris.php" class="nav-link">Favoris</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-
-     <div class="leagues">
+<div class="leagues">
         <div class="league" id="premier-league">
             <a href="premierleague.php" class="league-link">Premier League</a>
             <div class="teams">
@@ -75,45 +77,86 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <h1>Mes Commandes</h1>
-        <!-- Section pour afficher les commandes de l'utilisateur -->
-        <!-- PHP pour récupérer et afficher les données des commandes -->
-        <?php
-            // Inclure le fichier de connexion à la base de données
-            include_once "connexion.php";
 
-            // Requête pour récupérer les commandes de l'utilisateur (vous devez remplacer USER_ID par l'ID de l'utilisateur connecté)
-            $query = "SELECT * FROM commande WHERE id_client = USER_ID";
+<div class="order-container">
+    <h1>Votre Commande</h1>
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th class="order-header">Produit</th>
+                <th class="order-header">Prix</th>
+                <th class="order-header">Quantité</th>
+                <th class="order-header">Sous-total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "Dusty126$";
+            $dbname = "maillot_nouvelle";
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-            // Exécution de la requête
-            $result = mysqli_query($conn, $query);
-
-            // Vérifier s'il y a des commandes
-            if (mysqli_num_rows($result) > 0) {
-                // Afficher les commandes
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<div class='commande'>";
-                    echo "<p>Commande n°: " . $row['id_commande'] . "</p>";
-                    echo "<p>Date de commande: " . $row['date_commande'] . "</p>";
-                    echo "<p>Statut: " . ($row['statut_commande'] ? "Validée" : "En attente") . "</p>";
-                    echo "</div>";
-                }
-            } else {
-                echo "<p>Aucune commande trouvée.</p>";
+            if ($conn->connect_error) {
+                die("Échec de la connexion : " . $conn->connect_error);
             }
 
-            // Fermer la connexion à la base de données
-            mysqli_close($conn);
-        ?>
-    </div>
+            $total = 0;
+            if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+                foreach ($_SESSION['cart'] as $productId) {
+                    $sql = "SELECT * FROM produit WHERE id_produit = $productId";
+                    $result = $conn->query($sql);
 
-    <footer>
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $description = $row["description_"];
+                            $prix = $row["prix"];
+                            $image = $row["image"];
+                            $subtotal = $prix; // Assuming quantity is 1 for simplicity
+                            $total += $subtotal;
+                            echo "<tr class='order-row'>";
+                            echo "<td class='order-product'><img src='" . htmlspecialchars($image) . "' alt='" . htmlspecialchars($description) . "' class='order-image'>" . htmlspecialchars($description) . "</td>";
+                            echo "<td class='order-price'>" . htmlspecialchars($prix) . "€</td>";
+                            echo "<td class='order-quantity'>1</td>"; // Assuming quantity is 1 for simplicity
+                            echo "<td class='order-subtotal'>" . htmlspecialchars($subtotal) . "€</td>";
+                            echo "</tr>";
+                        }
+                    }
+                }
+            } else {
+                echo "<tr class='order-empty'><td colspan='4'>Votre panier est vide.</td></tr>";
+            }
+
+            $conn->close();
+            ?>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="order-total-label">Total</td>
+                <td class="order-total-value"><?php echo htmlspecialchars($total); ?>€</td>
+            </tr>
+        </tfoot>
+    </table>
+    <button id="payer" class="order-pay-button">Payer</button>
+</div>
+<script>
+document.getElementById('payer').addEventListener('click', function() {
+    alert('Merci pour votre commande!');
+    <?php
+    // Vider le panier après commande
+    unset($_SESSION['cart']);
+    ?>
+    window.location.href = 'index.php';
+});
+</script>
+
+
+<footer>
         <div class="footer-container">
             <div class="footer-section">
-                <h4>A propos de nous </h4>
-                <p>Votre boutique unique pour les maillots de football officiels. Qualité garantie..</p>
-            </div>
+               <h4><a href="#about-us">A propos de nous</a></h4>
+    <p>Votre boutique unique pour les maillots de football officiels. Qualité garantie..</p>
+             </div>
             <div class="footer-section">
                 <h4>Contactez nous </h4>
                 <p>Email: support@footballmezaour.com</p>
@@ -131,6 +174,6 @@
             <p>&copy; 2024 Football Jersey Shop. tout droit reservés.</p>
         </div>
     </footer>
-</body>
 
+</body>
 </html>

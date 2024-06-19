@@ -190,14 +190,15 @@ button.ajouter, button.favoris {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 20px;
 }
 
 button.ajouter:hover, button.favoris:hover {
-    background-color: #0072d9;
+    background-color: #20ff2f;
 }
 
 .favoris i {
-    color: #000000;
+    color: white;
     transition: color 0.3s;
 }
 
