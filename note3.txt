@@ -1,0 +1,22 @@
+bien regarder les actions propes au commandes 
+ 
+
+dire a bouba une commande contient unn ou plusieur produit  donc dans commande on doit avoir le produit en quantite 
+
+de meme regarder ya des coleur qui doivent changer dans mon interface s 
+demain faire en sorte quenladmin va pas se fatiguer et que pour les produit vue quil appartienne a des categorie donner le choix a ladmin de choisr quel catgeorie il veut choisr et on lui listera les maillots de cette catveorie 
+de bmeme pour les commandes est ce que serait pas bien de dire ue ell appartient a tel client donc lid est ....
+intergrer bootstrap au code de bouba et de teddy 
+leur donner la nouvelle base de donner 
+la barre de recherche !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+essayer de tester le saction comme ajouter un porduit pour voir si il sera vraiment dans ama base de donner oi pas 
+est ce que ce serait pasmieux de chnager un truc dans la table admin parceque le nom est le prenon il sert a rien suauf si cest pour voir la liste des admin bon je vais crrer une page ou yaura les admin non cest pas grave jai deja la page  cest mieux de lajoter parceque comme ca on pourra mettre de nouvelle admin 
+bien modifier la  partie admin pour quel match avec le reste des pages 
+de meme le footer 
+voir tout les pages pour remplir la classe hero parceque on la voit pas dans ma page 
+est ce que on pourrait pas ajouter une phot de porfil pour chque admin meme si cest compliquer 
+Pour améliorer votre tableau de bord avec des statistiques dynamiques, des couleurs et des graphiques, nous allons :
+
+    Utiliser PHP pour récupérer les statistiques à partir de la base de données.
+    Utiliser Chart.js pour afficher un graphique.
+    Ajouter des couleurs et des styles supplémentaires pour rendre le tableau de bord plus attractif.

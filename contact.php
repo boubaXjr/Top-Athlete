@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -109,10 +108,12 @@
                 <p>Email: support@topathlete.com</p>
                 <p>Téléphone: +123 456 7890</p>
                 <p>Adresse: 123 Rue du Sport, Paris, France</p>
-                <div class="social-icons">
-                    <a href="#" class="icon facebook">Facebook</a>
-                    <a href="#" class="icon twitter">Twitter</a>
-                    <a href="#" class="icon instagram">Instagram</a>
+                <div>
+                     <a href="https://www.instagram.com/bouba_126/"><img src="image/insta_img.jpg" class="imge"></a>
+                     <a href="https://github.com/boubaXjr"><img src="image/github_img.png" class="imge"></a>
+                     <a href="https://www.facebook.com/?locale=fr_FR"><img src="image/facebook_img.png" class="imge"></a>
+                </div>
+        
                 </div>
             </section>
         </section>

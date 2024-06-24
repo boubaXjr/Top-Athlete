@@ -1,17 +1,14 @@
 <?php
-$hostname = "localhost";
+$servername = "localhost";
 $username = "root";
 $password = "mamadou";
-$database = "maillot_nouvelle";
+$dbname = "maillot_nouvelle";
 
-// Connexion à la base de données
-$con = mysqli_connect($hostname, $username, $password, $database);
+// Créer la connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Vérification de la connexion
-if (!$con) {
-    die("La connexion à la base de données a échoué : " . mysqli_connect_error());
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("Connexion échouée : " . $conn->connect_error);
 }
-
-// Affichage d'un message de succès
-echo "Connexion réussie à la base de données !";
 ?>

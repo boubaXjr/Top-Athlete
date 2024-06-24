@@ -306,6 +306,7 @@
             <p>&copy; 2024 Football Jersey Shop. tout droit reservés.</p>
         </div>
     </footer>
+    
 <!-- JavaScript pour le carrousel -->
     <script>
        let slideIndex = 0;

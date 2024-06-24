@@ -74,5 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Si nous sommes sur la page du panier, charger les articles
     if (document.getElementById('cart-items')) {
         loadCartItems();
-    }
+    }
 });
