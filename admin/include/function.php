@@ -1,13 +1,8 @@
 <?php
 function check_login() {
-    session_start();
-    if (!isset($_SESSION['admin'])) {
+    if (!isset($_SESSION['user_id'])) {
         header("Location: login.php");
-        exit();
+        exit;
     }
-}
-
-function sanitize_input($data) {
-    return htmlspecialchars(stripslashes(trim($data)));
 }
 ?>

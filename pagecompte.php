@@ -1,70 +1,50 @@
 <?php
-session_start();
+$servername = "localhost";
+$username = "root";
+$password = "mamadou";
+$dbname = "maillot_nouvelle";
 
-// Connexion à la base de données
-$conn = new mysqli('localhost', 'root', 'toor', 'maillot_nouvelle');
+// Créer une connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifier la connexion
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("La connexion a échoué: " . $conn->connect_error);
 }
 
-$error_message = ""; // Déclaration de la variable d'erreur pour éviter les erreurs d'initialisation
+session_start();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Gestion de l'inscription
-    if (isset($_POST['signUp'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['login'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $confirm_password = $_POST['confirm_password'];
-        $nom = $_POST['nom'];
-        $prenom = $_POST['prenom'];
 
-        if ($password === $confirm_password) {
-            $stmt = $conn->prepare("SELECT * FROM client WHERE mail = ?");
-            $stmt->bind_param("s", $email);
-            $stmt->execute();
-            $result = $stmt->get_result();
+        $sql = "SELECT * FROM client WHERE mail = '$email' AND mot_de_passe = '$password'";
+        $result = $conn->query($sql);
 
-            if ($result->num_rows == 0) {
-                $stmt = $conn->prepare("INSERT INTO client (mail, mot_de_passe, nom, prenom) VALUES (?, ?, ?, ?)");
-                $stmt->bind_param("ssss", $email, $password, $nom, $prenom);
-                if ($stmt->execute()) {
-                    $_SESSION['user_id'] = $conn->insert_id; // Stocker l'ID utilisateur dans la session
-                    $_SESSION['prenom'] = $prenom; // Stocker le prénom dans la session
-                    header("Location: userpage.php");
-                    exit();
-                } else {
-                    $error_message = "Error: " . $stmt->error;
-                }
-            } else {
-                $error_message = "Email déjà utilisé";
-            }
+        if ($result->num_rows > 0) {
+            $_SESSION['email'] = $email;
+            header("Location: index.php");
+            exit();
         } else {
-            $error_message = "Les mots de passe ne correspondent pas";
+            echo "Email ou mot de passe incorrect.";
         }
     }
 
-    // Gestion de la connexion
-    if (isset($_POST['signIn'])) {
+    if (isset($_POST['signup'])) {
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $stmt = $conn->prepare("SELECT * FROM client WHERE mail = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $sql = "INSERT INTO client (nom, prenom, mail, mot_de_passe) VALUES ('$nom', '$prenom', '$email', '$password')";
 
-        if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
-            if ($password === $user['mot_de_passe']) {
-                $_SESSION['user_id'] = $user['id_client'];
-                $_SESSION['prenom'] = $user['prenom'];
-                header("Location: userpage.php");
-                exit();
-            } else {
-                $error_message = "Identifiants de connexion invalides";
-            }
+        if ($conn->query($sql) === TRUE) {
+            echo "Inscription réussie. Vous pouvez maintenant vous connecter.";
+            header("Location: index.php");
+            exit();
         } else {
-            $error_message = "Identifiants de connexion invalides";
+            echo "Erreur: " . $sql . "<br>" . $conn->error;
         }
     }
 }
@@ -122,28 +102,25 @@ $conn->close();
 </header>
 
 <div class="container">
-    <!-- Formulaire de connexion -->
     <div class="form-container sign-in-container">
-        <form action="pagecompte.php" method="post">
+        <form method="POST" action="#">
             <h1>Se Connecter</h1>
             <input type="email" name="email" placeholder="Email" required />
             <input type="password" name="password" placeholder="Mot de passe" required />
-            <button type="submit" name="signIn">Se Connecter</button>
+            <button type="submit" name="login">Se Connecter</button>
         </form>
     </div>
-    <!-- Formulaire d'inscription -->
     <div class="form-container sign-up-container">
-        <form action="pagecompte.php" method="post">
-            <h1>Créer un Compte!</h1>
+        <form method="POST" action="#">
+            <h1>Créez un Compte!</h1>
             <input type="text" name="nom" placeholder="Nom" required />
             <input type="text" name="prenom" placeholder="Prénom" required />
             <input type="email" name="email" placeholder="Email" required />
             <input type="password" name="password" placeholder="Mot de passe" required />
-            <input type="password" name="confirm_password" placeholder="Répétez le mot de passe" required />
-            <button type="submit" name="signUp">S'inscrire</button>
+            <input type="password" placeholder="Répétez le mot de passe" required />
+            <button type="submit" name="signup">S'inscrire</button>
         </form>
     </div>
-    <!-- Conteneur pour l'effet d'overlay entre les formulaires -->
     <div class="overlay-container">
         <div class="overlay">
             <div class="overlay-panel overlay-left">

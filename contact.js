@@ -1,4 +1,4 @@
-        document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('form');
             const successMessage = document.createElement('div');
             successMessage.className = 'notification success';

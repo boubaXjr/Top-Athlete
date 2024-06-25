@@ -26,7 +26,20 @@ CREATE TABLE client(
 -- Insertion d'exemples de données dans la table Client
 INSERT INTO client (mail, mot_de_passe, nom, prenom) VALUES
 ('john.doe@example.com', 'password123', 'Doe', 'John'),
-('jane.smith@example.com', 'password456', 'Smith', 'Jane');
+('jane.smith@example.com', 'password456', 'Smith', 'Jane'),
+('alex.jones@example.com', 'password789', 'Jones', 'Alex'),
+('emily.johnson@example.com', 'password101', 'Johnson', 'Emily'),
+('michael.brown@example.com', 'password102', 'Brown', 'Michael'),
+('sarah.davis@example.com', 'password103', 'Davis', 'Sarah'),
+('david.miller@example.com', 'password104', 'Miller', 'David'),
+('jessica.wilson@example.com', 'password105', 'Wilson', 'Jessica'),
+('daniel.moore@example.com', 'password106', 'Moore', 'Daniel'),
+('laura.taylor@example.com', 'password107', 'Taylor', 'Laura'),
+('chris.anderson@example.com', 'password108', 'Anderson', 'Chris'),
+('amanda.thomas@example.com', 'password109', 'Thomas', 'Amanda'),
+('joshua.jackson@example.com', 'password110', 'Jackson', 'Joshua'),
+('megan.white@example.com', 'password111', 'White', 'Megan'),
+('james.harris@example.com', 'password112', 'Harris', 'James');
 
 -- Table Administrateur
 CREATE TABLE administrateur (
@@ -58,7 +71,20 @@ CREATE TABLE Commande(
 -- Insertion d'exemples de données dans la table Commande
 INSERT INTO Commande (Statut_Commande, Date_Commande, id_client) VALUES
 (TRUE, '2024-05-01', 1),
-(FALSE, '2024-05-02', 2);
+(FALSE, '2024-05-02', 2),
+(TRUE, '2024-05-03', 3),
+(FALSE, '2024-05-04', 4),
+(TRUE, '2024-05-05', 5),
+(FALSE, '2024-05-06', 6),
+(TRUE, '2024-05-07', 7),
+(FALSE, '2024-05-08', 8),
+(TRUE, '2024-05-09', 9),
+(FALSE, '2024-05-10', 10),
+(TRUE, '2024-05-11', 11),
+(FALSE, '2024-05-12', 12),
+(TRUE, '2024-05-13', 13),
+(FALSE, '2024-05-14', 14),
+(TRUE, '2024-05-15', 15);
 
 -- Table Categorie
 CREATE TABLE Categorie(
@@ -169,7 +195,20 @@ CREATE TABLE panier(
 -- Insertion d'exemples de données dans la table Panier
 INSERT INTO panier (date_creation, id_client) VALUES
 ('2024-05-01', 1),
-('2024-05-02', 2);
+('2024-05-02', 2),
+('2024-05-03', 3),
+('2024-05-04', 4),
+('2024-05-05', 5),
+('2024-05-06', 6),
+('2024-05-07', 7),
+('2024-05-08', 8),
+('2024-05-09', 9),
+('2024-05-10', 10),
+('2024-05-11', 11),
+('2024-05-12', 12),
+('2024-05-13', 13),
+('2024-05-14', 14),
+('2024-05-15', 15);
 
 -- Table Contact
 CREATE TABLE contact(
@@ -185,7 +224,20 @@ CREATE TABLE contact(
 -- Insertion d'exemples de données dans la table Contact
 INSERT INTO contact (sujet, document_joint, descriptif, id_client) VALUES
 ('Support', 'file.pdf', 'Description of the issue', 1),
-('Feedback', 'image.png', 'Feedback description', 2);
+('Feedback', 'image.png', 'Feedback description', 2),
+('Question', NULL, 'How do I change my password?', 3),
+('Bug Report', NULL, 'There is a bug on the checkout page.', 4),
+('Feature Request', NULL, 'I would like to see a new feature.', 5),
+('Support', 'document.pdf', 'I need help with my account.', 6),
+('Feedback', 'image.png', 'Great service!', 7),
+('Support', NULL, 'How do I track my order?', 8),
+('Question', NULL, 'What is your return policy?', 9),
+('Bug Report', 'screenshot.png', 'Error on the login page.', 10),
+('Feature Request', NULL, 'Add more payment options.', 11),
+('Support', NULL, 'My order was damaged.', 12),
+('Feedback', 'image.png', 'Fast delivery!', 13),
+('Support', NULL, 'How do I update my address?', 14),
+('Question', 'file.pdf', 'What is the shipping cost?', 15);
 
 -- Table Ajouter (Panier et Produit)
 CREATE TABLE ajouter(
@@ -200,7 +252,20 @@ CREATE TABLE ajouter(
 -- Insertion d'exemples de données dans la table Ajouter
 INSERT INTO ajouter (ID_Produit, id_panier, quantite) VALUES
 (1, 1, 2),
-(2, 2, 1);
+(2, 2, 1),
+(3, 3, 1),
+(4, 4, 2),
+(5, 5, 3),
+(6, 6, 1),
+(7, 7, 2),
+(8, 8, 1),
+(9, 9, 3),
+(10, 10, 2),
+(11, 11, 1),
+(12, 12, 2),
+(13, 13, 1),
+(14, 14, 3),
+(15, 15, 2);
 
 -- Table Gere (Commande et Administrateur)
 CREATE TABLE gere(
@@ -214,7 +279,20 @@ CREATE TABLE gere(
 -- Insertion d'exemples de données dans la table Gere
 INSERT INTO gere (ID_Commande, ID_Administrateur) VALUES
 (1, 1),
-(2, 2);
+(2, 2),
+(3, 1),
+(4, 2),
+(5, 3),
+(6, 1),
+(7, 2),
+(8, 3),
+(9, 1),
+(10, 2),
+(11, 3),
+(12, 1),
+(13, 2),
+(14, 3),
+(15, 1);
 
 -- Table Ajouterr (Produit et Administrateur)
 CREATE TABLE ajouterr(
@@ -228,7 +306,20 @@ CREATE TABLE ajouterr(
 -- Insertion d'exemples de données dans la table Ajouterr
 INSERT INTO ajouterr (ID_Produit, ID_Administrateur) VALUES
 (1, 1),
-(2, 2);
+(2, 2),
+(3, 3),
+(4, 1),
+(5, 2),
+(6, 3),
+(7, 1),
+(8, 2),
+(9, 3),
+(10, 1),
+(11, 2),
+(12, 3),
+(13, 1),
+(14, 2),
+(15, 3);
 
 -- Table Contenir (Commande et Produit)
 CREATE TABLE contenir(
@@ -243,7 +334,20 @@ CREATE TABLE contenir(
 -- Insertion d'exemples de données dans la table Contenir
 INSERT INTO contenir (ID_Produit, ID_Commande, quantite) VALUES
 (1, 1, 2),
-(2, 2, 1);
+(2, 2, 1),
+(3, 3, 1),
+(4, 4, 2),
+(5, 5, 3),
+(6, 6, 1),
+(7, 7, 2),
+(8, 8, 1),
+(9, 9, 3),
+(10, 10, 2),
+(11, 11, 1),
+(12, 12, 2),
+(13, 13, 1),
+(14, 14, 3),
+(15, 15, 2);
 
 -- Table Favoris (Client et Produit)
 CREATE TABLE favoris(
@@ -257,7 +361,20 @@ CREATE TABLE favoris(
 -- Insertion d'exemples de données dans la table Favoris
 INSERT INTO favoris (id_client, ID_Produit) VALUES
 (1, 1),
-(2, 2);
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15);
 
 -- Table Gere_Client (Client et Administrateur)
 CREATE TABLE gere_client(
@@ -271,4 +388,17 @@ CREATE TABLE gere_client(
 -- Insertion d'exemples de données dans la table Gere_Client
 INSERT INTO gere_client (id_client, ID_Administrateur) VALUES
 (1, 1),
-(2, 2);
+(2, 2),
+(3, 3),
+(4, 1),
+(5, 2),
+(6, 3),
+(7, 1),
+(8, 2),
+(9, 3),
+(10, 1),
+(11, 2),
+(12, 3),
+(13, 1),
+(14, 2),
+(15, 3);
