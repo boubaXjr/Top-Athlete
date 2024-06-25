@@ -8,10 +8,7 @@ de meme pour la page daceuille mettre le lien pour montrer la description du clu
 de meme faire en sorte que la page commande soit pareil que le reste des pages 
 ajouter des maillot pour que ca soit en norme 
 
--->je moccupe de la page favoris de tel sorte que ce soit pareil avec la page panier 
-je moccupe de la page connexion de tel sorte que ce soit pareil avec la page panier 
 pour la barre de navigation des club on va garder ca comme ca 
-jajoute a favoris la barre de navigation de tel sorte que ce soit pareil avec panier 
 ajouter une barre de navigation pour recherche.php et diminuer la taille de la police
 de meme modifier le product_detail.php pour que ca soit pareil avec les autres pages 
 
@@ -34,4 +31,4 @@ sequenceDiagram
 
 
     --> et cest fini si on fait tout ca on a terminer notre site et doit faire tout ca en 3h 
-    
+

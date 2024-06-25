@@ -43,8 +43,28 @@
                     </ul>
                 </div>
             </nav>
-            
+
         </header>
+    </div>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <a href="premierleague.php" class="btn btn-secondary btn-block">Premier League</a>
+            </div>
+            <div class="col">
+                <a href="laliga.php" class="btn btn-secondary btn-block">LaLiga</a>
+            </div>
+            <div class="col">
+                <a href="ligue1.php" class="btn btn-secondary btn-block">Ligue 1</a>
+            </div>
+            <div class="col">
+                <a href="bundesliga.php" class="btn btn-secondary btn-block">Bundesliga</a>
+            </div>
+            <div class="col">
+                <a href="seria.php" class="btn btn-secondary btn-block">Serie A</a>
+            </div>
+        </div>
     </div>
 
 
