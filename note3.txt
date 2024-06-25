@@ -1,0 +1,34 @@
+
+-->bouba va soccuper de la page contact de tel sorte que ce soit pareil avec la page panier 
+de meme faire en sorte que quand on appuis sur ajouter au panier que le  produit va  vers la page panier et quand on sera dans la page panier quon puisse voir les porduit mis en panier
+de meme que les porduit mis en favoris  que ca soit pareil 
+
+-->teddy va soccuper de la page dacceuil de tel sorte que ce soit pareil avec la page panier 
+de meme pour la page daceuille mettre le lien pour montrer la description du club slectionner
+de meme faire en sorte que la page commande soit pareil que le reste des pages 
+ajouter des maillot pour que ca soit en norme 
+
+pour la barre de navigation des club on va garder ca comme ca 
+ajouter une barre de navigation pour recherche.php et diminuer la taille de la police
+de meme modifier le product_detail.php pour que ca soit pareil avec les autres pages 
+
+aller voir le travail des autres filles sur goalshop pour voir eest ce que on pourrait pas prendre deleur code 
+
+--> prendre le code de save panier.php et add.script panier  de la fille et lemmner dans notre code  ce qui nous permettra de sauvegarder les prdouit mis en favoris dans le panier et dans la page commande cela nous regle 3 problemes
+
+--> envoyer ca a chat pour quil comprenne et quil nous code ca pour les 3 pages :
+sequenceDiagram
+    participant Utilisateur
+    participant Navigateur
+    participant Serveur
+    
+    Utilisateur->>Navigateur: Clique "Ajouter au Panier"
+    Navigateur->>Navigateur: Exécute Script JavaScript
+    Navigateur->>Serveur: Envoie Requête AJAX (Données Produit)
+    Serveur->>Serveur: Exécute PHP (Ajoute au Panier)
+    Serveur-->>Navigateur: Réponse (Succès/Échec)
+    Navigateur->>Navigateur: Affiche Réponse dans la Console
+
+
+    --> et cest fini si on fait tout ca on a terminer notre site et doit faire tout ca en 3h 
+
