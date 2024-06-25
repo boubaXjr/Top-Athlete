@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,7 +20,7 @@
         <nav>
             <ul>
                 <li><a href="contact.php" class="les3">Contact</a></li>
-                <li><a href="pagecompte.php" class="les3">Compte</a></li>
+                <li><a href="userpage.php" class="les3">Compte</a></li>
                 <li><a href="panier.php" class="cart les3">Panier <span id="cart-count">0</span></a></li>
                 <li><a href="favoris.php" class="les3">Favoris</a></li>
             </ul>
