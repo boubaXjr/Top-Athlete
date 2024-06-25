@@ -2,7 +2,7 @@
 session_start();
 $servername = "localhost";
 $username = "root";
-$password = "mamadou";
+$password = "toor";
 $dbname = "maillot_nouvelle";
 
 // Créer une connexion

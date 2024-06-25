@@ -88,7 +88,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['query'])) {
     $servername = "localhost";
     $username = "root";
-    $password = "mamadou";
+    $password = "toor";
     $dbname = "maillot_nouvelle";
 
     // Créer une connexion

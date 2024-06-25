@@ -102,7 +102,7 @@
             <?php
             $servername = "localhost";
             $username = "root";
-            $password = "mamadou";
+            $password = "toor";
             $dbname = "maillot_nouvelle";
             $conn = new mysqli($servername, $username, $password, $dbname);
 
