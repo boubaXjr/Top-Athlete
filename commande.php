@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,17 +10,28 @@ session_start();
 </head>
 <body>
 <header>
+   <header>
     <div class="header-container">
         <a href="index.php"><img src="image/50.JPG" alt="TOP ATHLETE" class="logo"></a>
         <div class="search-container">
-            <input type="text" placeholder="Recherche" class="search-bar">
+            <form action="recherche.php" method="GET">
+                <input type="text" name="query" placeholder="Recherche" class="search-bar">
+                <button type="submit">Recherche</button>
+            </form>
         </div>
         <nav>
-            <ul class="nav-links">
-                <li><a href="contact.php" class="nav-link">Contact</a></li>
-                <li><a href="pagecompte.php" class="nav-link">Compte</a></li>
-                <li><a href="panier.php" class="nav-link">Panier <span id="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?></span></a></li>
-                <li><a href="favoris.php" class="nav-link">Favoris</a></li>
+            <ul>
+                <li><a href="contact.php" class="les3">Contact</a></li>
+                <?php
+                session_start();
+                if (isset($_SESSION['email'])) {
+                    echo '<li><a href="logout.php" class="les3">Déconnexion</a></li>';
+                } else {
+                    echo '<li><a href="pagecompte.php" class="les3">Compte</a></li>';
+                }
+                ?>
+                <li><a href="panier.php" class="cart les3">Panier <span id="cart-count">0</span></a></li>
+                <li><a href="favoris.php" class="les3">Favoris</a></li>
             </ul>
         </nav>
     </div>

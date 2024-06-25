@@ -1,22 +1,37 @@
-bien regarder les actions propes au commandes 
- 
 
-dire a bouba une commande contient unn ou plusieur produit  donc dans commande on doit avoir le produit en quantite 
+-->bouba va soccuper de la page contact de tel sorte que ce soit pareil avec la page panier 
+de meme faire en sorte que quand on appuis sur ajouter au panier que le  produit va  vers la page panier et quand on sera dans la page panier quon puisse voir les porduit mis en panier
+de meme que les porduit mis en favoris  que ca soit pareil 
 
-de meme regarder ya des coleur qui doivent changer dans mon interface s 
-demain faire en sorte quenladmin va pas se fatiguer et que pour les produit vue quil appartienne a des categorie donner le choix a ladmin de choisr quel catgeorie il veut choisr et on lui listera les maillots de cette catveorie 
-de bmeme pour les commandes est ce que serait pas bien de dire ue ell appartient a tel client donc lid est ....
-intergrer bootstrap au code de bouba et de teddy 
-leur donner la nouvelle base de donner 
-la barre de recherche !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-essayer de tester le saction comme ajouter un porduit pour voir si il sera vraiment dans ama base de donner oi pas 
-est ce que ce serait pasmieux de chnager un truc dans la table admin parceque le nom est le prenon il sert a rien suauf si cest pour voir la liste des admin bon je vais crrer une page ou yaura les admin non cest pas grave jai deja la page  cest mieux de lajoter parceque comme ca on pourra mettre de nouvelle admin 
-bien modifier la  partie admin pour quel match avec le reste des pages 
-de meme le footer 
-voir tout les pages pour remplir la classe hero parceque on la voit pas dans ma page 
-est ce que on pourrait pas ajouter une phot de porfil pour chque admin meme si cest compliquer 
-Pour améliorer votre tableau de bord avec des statistiques dynamiques, des couleurs et des graphiques, nous allons :
+-->teddy va soccuper de la page dacceuil de tel sorte que ce soit pareil avec la page panier 
+de meme pour la page daceuille mettre le lien pour montrer la description du club slectionner
+de meme faire en sorte que la page commande soit pareil que le reste des pages 
+ajouter des maillot pour que ca soit en norme 
 
-    Utiliser PHP pour récupérer les statistiques à partir de la base de données.
-    Utiliser Chart.js pour afficher un graphique.
-    Ajouter des couleurs et des styles supplémentaires pour rendre le tableau de bord plus attractif.
+-->je moccupe de la page favoris de tel sorte que ce soit pareil avec la page panier 
+je moccupe de la page connexion de tel sorte que ce soit pareil avec la page panier 
+pour la barre de navigation des club on va garder ca comme ca 
+jajoute a favoris la barre de navigation de tel sorte que ce soit pareil avec panier 
+ajouter une barre de navigation pour recherche.php et diminuer la taille de la police
+de meme modifier le product_detail.php pour que ca soit pareil avec les autres pages 
+
+aller voir le travail des autres filles sur goalshop pour voir eest ce que on pourrait pas prendre deleur code 
+
+--> prendre le code de save panier.php et add.script panier  de la fille et lemmner dans notre code  ce qui nous permettra de sauvegarder les prdouit mis en favoris dans le panier et dans la page commande cela nous regle 3 problemes
+
+--> envoyer ca a chat pour quil comprenne et quil nous code ca pour les 3 pages :
+sequenceDiagram
+    participant Utilisateur
+    participant Navigateur
+    participant Serveur
+    
+    Utilisateur->>Navigateur: Clique "Ajouter au Panier"
+    Navigateur->>Navigateur: Exécute Script JavaScript
+    Navigateur->>Serveur: Envoie Requête AJAX (Données Produit)
+    Serveur->>Serveur: Exécute PHP (Ajoute au Panier)
+    Serveur-->>Navigateur: Réponse (Succès/Échec)
+    Navigateur->>Navigateur: Affiche Réponse dans la Console
+
+
+    --> et cest fini si on fait tout ca on a terminer notre site et doit faire tout ca en 3h 
+    
