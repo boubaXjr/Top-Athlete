@@ -3,53 +3,59 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004AAD;
+    padding: 10px 20px;
+}
+
+
 header {
-    background-color: #0d4a80;
+    background-color: #004AAD;
     color: white;
     width: 100%;
 }
 
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 50px;
-}
 
 .logo {
-    width: 80px;
+    width: 40px;
     margin-left: 10px;
-    border-radius: 50%;
+    width: 200px;
+    margin-left: 10%;
 }
 
-.search {
-    width: 50%;
-    padding: 10px 10px;
-    border: none;
-    border-radius: 20px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
 }
 
-.les3 {
-    margin-right: 30px;
-}
-
-.nav-icons a {
+nav ul li {
     margin-left: 20px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    position: relative;
+    font-size: 18px;
 }
 
-.nav-icons .cart-count {
-    background: #fff;
-    color: #0d4a80;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
 
 .leagues {
     display: flex;
@@ -65,7 +71,6 @@ header {
     color: #0d4a80;
     font-weight: bold;
     background-color: #dfe5e8;
-    transition: background-color 0.3s;
     text-decoration: none;
 }
 
@@ -94,28 +99,49 @@ header {
     text-align: left;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Ajout de la transition pour la couleur de fond et la couleur du texte */
 }
 
 .teams p:hover {
-    background-color: #f1f1f1;
+    background-color: #0d4a80; /* Changement de couleur de fond au survol */
+    color: white; /* Changement de couleur du texte au survol */
 }
 
-.teams p:last-child {
-    border-bottom: none;
+
+.league-link {
+    display: inline-block;
+    position: relative;
+    color: #0d4a80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.league-link:hover {
+    color: #1192e8; /* Changement de couleur au survol */
+}
+
+.league-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1192e8; /* Ligne bleue sous le lien */
+    transform: scaleX(0); /* Ligne initialement invisible */
+    transition: transform 0.3s ease;
+}
+
+.league-link:hover::before {
+    transform: scaleX(1); /* Affiche la ligne bleue au survol */
 }
 
 .products-container {
-    display: none;
+    display: flex;
     justify-content: space-around;
     padding: 20px;
     flex-wrap: wrap;
     background-color: #f8f9fa;
-    transition: all 0.5s ease-in-out;
-}
-
-.products-container.show {
-    display: flex;
 }
 
 .product {
@@ -126,7 +152,7 @@ header {
     margin: 10px;
     background-color: transparent;
     color: #0d4a80;
-    transition: transform 0.3s;
+    text-align: center;
 }
 
 .product:hover {
@@ -147,8 +173,24 @@ header {
     margin: 5px 0;
 }
 
+
+favoris i {
+    color: #000000; /* Couleur par défaut: noir */
+    font-size: 16px; /* Taille ajustée, réduisez cette valeur selon votre besoin */
+    transition: color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.favoris.active i {
+    color: #e84545; /* Rouge vif lorsque sélectionné */
+}
+
+.favoris:hover i {
+    color: #e84545; /* Rouge vif au survol pour indiquer l'interactivité */
+}
+
+
 footer {
-    background-color: #0d4a80;
+    background-color: #004AAD;
     color: #fff;
     padding: 20px 0;
 }
@@ -191,16 +233,4 @@ footer {
 
 .footer-bottom p {
     margin: 0;
-}
-
-.mail {
-    border: none;
-    border-radius: 20px;
-    padding: 8px;
-}
-
-.submit {
-    border: none;
-    border-radius: 20px;
-    padding: 8px;
 }

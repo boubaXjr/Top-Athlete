@@ -1,0 +1,28 @@
+Oui, absolument ! Vous avez déjà créé une table "Favoris" qui établit une relation entre les clients et les produits. Cela signifie que vous pouvez enregistrer les produits favoris de chaque utilisateur dans cette table. Ensuite, vous pouvez créer une page web où les utilisateurs peuvent voir la liste de leurs produits favoris en se basant sur les enregistrements dans cette table.
+
+Voici comment vous pourriez procéder :
+
+Lorsqu'un utilisateur ajoute un produit à ses favoris, vous insérez une entrée dans la table "Favoris" avec l'ID du client et l'ID du produit.
+
+Pour afficher les produits favoris d'un utilisateur sur une page web, vous pouvez effectuer une requête SQL pour sélectionner tous les produits qui ont un enregistrement dans la table "Favoris" avec l'ID du client correspondant.
+
+Ensuite, vous pouvez afficher ces produits sur la page web de manière similaire à la façon dont vous affichez les produits sur d'autres pages, mais en vous assurant de n'afficher que les produits favoris.
+
+De cette manière, vous permettez aux utilisateurs de voir la liste de leurs produits favoris sur votre site web.
+
+
+
+--> faire linterface admin dans cette interface il faut vraiment que ca soit beau javais aussi une question linterface admin il est connecter au phpmyadmin ?????
+-->la couelur de la page compte pour la connexion
+-->le suivez nous mettre les logo teddy.
+-->le contacter crrer un commpte mail ou prendre le notre. 
+-->pour la barre de recherche comment ca va se passer.
+-->est ce que ce serai pas mieu de faire une page compte unique cest a dire on enleve tout ce qui comme header et footer ensuite si lutilisateur appuis sur se connecter ca le redirige vers la page dacceuille ?
+-->pour la page dacceuuille ya quoi encore a modifier selon vous ?? la coueleur ??
+--> la section a propos de nous ya pas trop de contenue on dirait que cst pauvre je trouve 
+-->EST CE QUE ON FERAIT PAS EN SORTE QUE LA BARRE DE NAVIGATION NOUS SUIVENT ???
+--> il faut ajouter dautre mailllot pour que le site soit plus long 
+-->le lien a propos de nous sur tous les page du site.
+--> pour lnterface admin le gars il devra gerer les commande, le fait dajouter des produits 
+--> essayer de voir si les autres peuvent faires des modif dans leur base de donne et enregistrer directement sur le phpmyadmin. 
+

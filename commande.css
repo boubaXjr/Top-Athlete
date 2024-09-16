@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004AAD;
+    padding: 10px 20px;
+}
+
+
+header {
+    background-color: #004AAD;
+    color: white;
+    width: 100%;
+}
+
+
+.logo {
+    width: 40px;
+    margin-left: 10px;
+    width: 200px;
+    margin-left: 10%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+
+.leagues {
+    display: flex;
+    justify-content: center;
+}
+
+.league {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #0d4a80;
+    font-weight: bold;
+    background-color: #dfe5e8;
+    text-decoration: none;
+}
+
+.league:hover {
+    background-color: white;
+}
+
+.teams {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.league:hover .teams {
+    display: block;
+}
+
+.teams p {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Ajout de la transition pour la couleur de fond et la couleur du texte */
+}
+
+.teams p:hover {
+    background-color: #0d4a80; /* Changement de couleur de fond au survol */
+    color: white; /* Changement de couleur du texte au survol */
+}
+
+
+.league-link {
+    display: inline-block;
+    position: relative;
+    color: #0d4a80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.league-link:hover {
+    color: #1192e8; /* Changement de couleur au survol */
+}
+
+.league-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1192e8; /* Ligne bleue sous le lien */
+    transform: scaleX(0); /* Ligne initialement invisible */
+    transition: transform 0.3s ease;
+}
+
+.league-link:hover::before {
+    transform: scaleX(1); /* Affiche la ligne bleue au survol */
+}
+footer {
+    background-color: #004AAD;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #1192e8;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
+
+/* Order Container Styling */
+.order-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-header {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.order-row {
+    text-align: left;
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+}
+
+.order-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.order-price, .order-quantity, .order-subtotal {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-empty {
+    text-align: center;
+    font-style: italic;
+}
+
+.order-total-label, .order-total-value {
+    padding: 10px;
+    font-weight: bold;
+    border-top: 2px solid #333;
+}
+
+.order-pay-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-pay-button:hover {
+    background-color: #218838;
+}
