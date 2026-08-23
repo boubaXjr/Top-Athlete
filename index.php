@@ -1,15 +1,6 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "toor";
-$dbname = "maillot_nouvelle";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("La connexion a échoué: " . $conn->connect_error);
-}
+require_once __DIR__ . '/db_config.php';
 ?>
 
 <!DOCTYPE html>
@@ -215,7 +206,7 @@ if ($conn->connect_error) {
             </div>
             <div class="col-md-4 mb-4" data-id="5">
                 <div class="card product">
-                    <img src="image/maillot_psg-bege.JPEG" class="card-img-top" alt="Maillot PSG">
+                    <img src="image/maillot_psg-bege.jpg" class="card-img-top" alt="Maillot PSG">
                     <div class="card-body">
                         <h5 class="card-title">Maillot PSG 2024/25</h5>
                         <p class="card-text">Domicile</p>
@@ -227,7 +218,7 @@ if ($conn->connect_error) {
             </div>
             <div class="col-md-4 mb-4" data-id="6">
                 <div class="card product">
-                    <img src="image/maillot_marseille_blanc1.JPEG" class="card-img-top" alt="Maillot Marseille">
+                    <img src="image/maillot_marseille_blanc1.jpg" class="card-img-top" alt="Maillot Marseille">
                     <div class="card-body">
                         <h5 class="card-title">Maillot Marseille 2024/25</h5>
                         <p class="card-text">Extérieur</p>
@@ -263,7 +254,7 @@ if ($conn->connect_error) {
             </div>
             <div class="col-md-4 mb-4" data-id="9">
                 <div class="card product">
-                    <img src="image/napoli_blanc.JPEG" class="card-img-top" alt="Napoli">
+                    <img src="image/napoli_blanc.jpg" class="card-img-top" alt="Napoli">
                     <div class="card-body">
                         <h5 class="card-title">Maillot Napoli 2024/25</h5>
                         <p class="card-text">Domicile</p>
@@ -287,7 +278,7 @@ if ($conn->connect_error) {
             </div>
             <div class="col-md-4 mb-4" data-id="11">
                 <div class="card product">
-                    <img src="image/internoireblanc.JPEG" class="card-img-top" alt="Maillot Inter milan">
+                    <img src="image/internoireblanc.jpg" class="card-img-top" alt="Maillot Inter milan">
                     <div class="card-body">
                         <h5 class="card-title">Maillot Inter milan 2024/25</h5>
                         <p class="card-text">Domicile</p>

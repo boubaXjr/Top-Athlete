@@ -50,18 +50,7 @@
 <div class="container my-4">
     <?php
     // Connexion à la base de données
-    $servername = "localhost";
-    $username = "root";
-    $password = "toor";
-    $dbname = "maillot_nouvelle";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Échec de la connexion : " . $conn->connect_error);
-    }
-
-    $teams = ['Barcelone', 'Real Madrid', 'Atletico Madrid'];
+    require_once __DIR__ . '/db_config.php';$teams = ['Barcelone', 'Real Madrid', 'Atletico Madrid'];
     foreach ($teams as $team) {
         echo "<div class='row my-4'>";
         echo "<div class='col-md-12'>";

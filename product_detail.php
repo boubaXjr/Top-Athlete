@@ -379,17 +379,7 @@ footer {
 
 <div class="product-detail-container">
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "toor";
-    $dbname = "maillot_nouvelle";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Échec de la connexion : " . $conn->connect_error);
-    }
-
-    if (isset($_GET['id'])) {
+    require_once __DIR__ . '/db_config.php';if (isset($_GET['id'])) {
         $productId = intval($_GET['id']);
         $sql = "SELECT * FROM produit WHERE id_produit = $productId";
         $result = $conn->query($sql);

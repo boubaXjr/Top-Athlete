@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "toor";
-$dbname = "maillot_nouvelle";
-
-// Créer une connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué: " . $conn->connect_error);
-}
+require_once __DIR__ . '/db_config.php';
 
 session_start();
 

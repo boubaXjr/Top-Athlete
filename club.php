@@ -320,18 +320,7 @@ if (isset($_GET['club'])) {
     $club = $_GET['club'];
 
     // Connexion à la base de données
-    $servername = "localhost";
-    $username = "root";
-    $password = "toor";
-    $dbname = "maillot_nouvelle";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Échec de la connexion : " . $conn->connect_error);
-    }
-
-    $sql = "SELECT * FROM produit WHERE club = '$club'";
+    require_once __DIR__ . '/db_config.php';$sql = "SELECT * FROM produit WHERE club = '$club'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

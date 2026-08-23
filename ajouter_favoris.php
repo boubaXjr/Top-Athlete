@@ -1,15 +1,6 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "toor";
-$dbname = "maillot_nouvelle";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("La connexion a échoué: " . $conn->connect_error);
-}
+require_once __DIR__ . '/db_config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['product_id'])) {
     if (isset($_SESSION['id_client'])) {

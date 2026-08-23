@@ -100,17 +100,7 @@
         </thead>
         <tbody>
             <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "toor";
-            $dbname = "maillot_nouvelle";
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            if ($conn->connect_error) {
-                die("Échec de la connexion : " . $conn->connect_error);
-            }
-
-            $total = 0;
+            require_once __DIR__ . '/db_config.php';$total = 0;
             if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 foreach ($_SESSION['cart'] as $productId) {
                     $sql = "SELECT * FROM produit WHERE id_produit = $productId";
