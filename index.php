@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
     favorisButtons.forEach(button => {
         button.addEventListener('click', function(event) {
             event.stopPropagation(); // Empêche la propagation de l'événement pour éviter le clic sur le produit
-            const productId = this.closest('.product').getAttribute('data-id');
+            const productId = this.closest('[data-id]').getAttribute('data-id');
             ajouterAuxFavoris(productId);
         });
     });
@@ -395,5 +395,6 @@ function ajouterAuxFavoris(productId) {
 }
 </script>
 
+<script src="panier.js"></script>
 </body>
 </html>

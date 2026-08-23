@@ -12,6 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $_SESSION['id_client'] = $row['id_client'];
             $_SESSION['email'] = $email;
             header("Location: index.php");
             exit();

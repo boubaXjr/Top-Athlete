@@ -1,4 +1,5 @@
 
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +24,6 @@
             <ul>
                 <li><a href="contact.php" class="les3">Contact</a></li>
                 <?php
-                session_start();
                 if (isset($_SESSION['email'])) {
                     echo '<li><a href="logout.php" class="les3">Déconnexion</a></li>';
                 } else {

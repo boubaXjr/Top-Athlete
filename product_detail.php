@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -411,35 +411,7 @@ footer {
     $conn->close();
     ?>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const ajouterButtons = document.querySelectorAll('.ajouter');
 
-    ajouterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const productId = this.getAttribute('data-id');
-
-            fetch('ajouter_au_panier.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ productId: productId })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('Produit ajouté au panier avec succès!');
-                    document.getElementById('cart-count').innerText = data.cartCount;
-                } else {
-                    alert('Erreur lors de l\'ajout au panier.');
-                }
-            })
-            .catch(error => console.error('Error:', error));
-        });
-    });
-});
-</script>
 
  <footer>
         <div class="footer-container">
@@ -467,5 +439,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+<script src="panier.js"></script>
 </body>
 </html>

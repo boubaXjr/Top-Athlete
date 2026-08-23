@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,7 +23,6 @@
                 <ul class="nav">
                     <li class="nav-item"><a href="contact.php" class="nav-link text-white">Contact</a></li>
                     <?php
-                    session_start();
                     if (isset($_SESSION['email'])) {
                         echo '<li class="nav-item"><a href="logout.php" class="nav-link text-white">Déconnexion</a></li>';
                     } else {
@@ -147,5 +147,6 @@
         xhr.send("product_id=" + productId);
     }
 </script>
+<script src="panier.js"></script>
 </body>
 </html>

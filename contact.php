@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,7 +27,6 @@
                     <a class="nav-link text-white" href="contact.php">Contact</a>
                 </li>
                 <?php
-                session_start();
                 if (isset($_SESSION['email'])) {
                     echo '<li class="nav-item"><a class="nav-link text-white" href="logout.php">Déconnexion</a></li>';
                 } else {
@@ -124,5 +124,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="contact.js"></script>
+<script src="panier.js"></script>
 </body>
 </html>

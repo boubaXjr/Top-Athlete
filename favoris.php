@@ -93,45 +93,46 @@ $conn->close();
     <?php if (count($favoris) > 0): ?>
         <div class="products-container">
             <?php foreach ($favoris as $product): ?>
-                <div class="product" data-id="<?php echo htmlspecialchars($product['ID_Produit']); ?>">
-                    <img src="<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['description_']); ?>">
-                    <div class="product-info">
-                        <p><?php echo htmlspecialchars($product['description_']); ?></p>
-                        <p><?php echo htmlspecialchars($product['prix']); ?>€</p>
-                        <button class="ajouter">Ajouter au panier</button>
-                        <button class="favoris"><i class="fas fa-heart"></i></button>
+                    <div class="product" data-id="<?php echo htmlspecialchars($product['id_produit'] ?? ''); ?>">
+                        <img src="<?php echo htmlspecialchars($product['image'] ?? ''); ?>" alt="<?php echo htmlspecialchars($product['description_'] ?? ''); ?>">
+                        <div class="product-info">
+                            <p><?php echo htmlspecialchars($product['description_'] ?? ''); ?></p>
+                            <p><?php echo htmlspecialchars($product['prix'] ?? ''); ?>€</p>
+                            <button class="ajouter">Ajouter au panier</button>
+                            <button class="favoris"><i class="fas fa-heart"></i></button>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    <?php else: ?>
-        <p>Vous n'avez aucun produit dans vos favoris.</p>
-    <?php endif; ?>
-</main>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <p>Vous n'avez aucun produit dans vos favoris.</p>
+        <?php endif; ?>
+    </main>
 
-<footer class="bg-primary text-white text-center py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h4><a href="#about-us" class="text-white">A propos de nous</a></h4>
-                <p>Votre boutique unique pour les maillots de football officiels. Qualité garantie.</p>
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4><a href="#about-us" class="text-white">A propos de nous</a></h4>
+                    <p>Votre boutique unique pour les maillots de football officiels. Qualité garantie.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contactez nous</h4>
+                    <p>Email: support@footballmezaour.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Suivez nous sur :</h4>
+                    <a href="#" class="text-white">Facebook</a>
+                    <a href="#" class="text-white">Twitter</a>
+                    <a href="#" class="text-white">Instagram</a>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h4>Contactez nous</h4>
-                <p>Email: support@footballmezaour.com</p>
-                <p>Phone: +123 456 7890</p>
-            </div>
-            <div class="col-md-4">
-                <h4>Suivez nous sur :</h4>
-                <a href="#" class="text-white">Facebook</a>
-                <a href="#" class="text-white">Twitter</a>
-                <a href="#" class="text-white">Instagram</a>
+            <div class="footer-bottom py-2">
+                <p>&copy; 2024 Football Jersey Shop. Tous droits réservés.</p>
             </div>
         </div>
-        <div class="footer-bottom py-2">
-            <p>&copy; 2024 Football Jersey Shop. Tous droits réservés.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+    <script src="panier.js"></script>
 </body>
 </html>
